@@ -1,0 +1,99 @@
+:root {
+    --primary-color: #282828;
+    --secondary-color: #212121;
+    --accent-color: #141414;
+}
+
+/* Critical Layout Components */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+main {
+    flex: 1;
+}
+
+.row {
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Less Critical Layout Components */
+
+header {
+    margin-bottom: 1rem;
+}
+
+header img {
+    max-height: 4rem;
+    width: auto;
+}
+
+footer {
+    padding: 1rem;
+}
+
+main {
+    container-type: inline-size;
+}
+
+.container {
+    width: min(100%, 40rem);
+    margin: auto;
+}
+
+@container (width > 40rem) {
+    .container.card {
+        border-radius: 1rem;
+    }
+}
+
+.card {
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.row-expander {
+    flex-grow: 1;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Colors */
+
+header,
+footer {
+    background-color: var(--accent-color);
+}
+
+body {
+    background-color: var(--primary-color);
+    color: whitesmoke;
+}
+
+.card {
+    background-color: var(--secondary-color);
+}
+
+a:link {
+    color: steelblue;
+}
+
+a:visited {
+    color: mediumpurple;
+}
